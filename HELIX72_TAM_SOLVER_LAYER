@@ -1,0 +1,355 @@
+Solver & Helix72 Engine — Description
+
+The Solver & Helix72 Engine is the interpretation layer of the system.
+It converts raw metrics into structural meaning, using the Tri-Antagonist Matrix (4-role model) and Helix72 stability logic.
+
+Core Function
+
+Take metric outputs and determine:
+
+who is driving load
+
+who is resisting
+
+how stable the system is
+
+where failure begins
+
+how it propagates through the body
+
+This layer answers:
+“What does the structure mean?”
+
+TAM 4-Role Model (Canonical)
+
+Agonist (Driver)
+Side generating dominant load / directional push
+
+Antagonist (Counterforce)
+Side resisting or opposing the load
+
+Bi-Antagonist (Stabilizer)
+System maintaining balance, corridor integrity, and control
+
+Tri-Antagonist (Anchor / Saboteur)
+Node or zone where the system locks, compensates, or fails to preserve stability
+
+Role Assignment Logic
+Agonist (Driver) Priority
+
+origin node side
+
+corridor breach side
+
+lower-chain burden
+
+COM shift
+
+pelvis tilt
+
+hip torque
+
+spine lean
+
+Antagonist (Counterforce)
+
+opposite side of agonist
+
+modified by independent resistance patterns
+
+Bi-Antagonist (Stabilizer State)
+
+Weighted inputs:
+
+COM containment (strongest)
+
+corridor integrity
+
+pelvis leveling
+
+knee control
+
+COM drift
+
+torque symmetry
+
+stance symmetry
+
+ankle symmetry
+
+foot symmetry
+
+States:
+
+ACTIVE / STABILIZING
+
+ACTIVE / STRAINED
+
+WEAK / UNSTABLE
+
+FAILED
+
+Tri-Antagonist (Anchor)
+
+Identifies:
+
+zone
+
+lower chain
+
+pelvic
+
+spinal
+
+cervical
+
+multi-zone
+
+side
+
+left / right / central
+
+type
+
+protective
+
+failing
+
+saboteur
+
+Helix72 Stability System
+
+Defines overall system condition:
+
+STABLE
+
+COMPENSATION
+
+STRESS
+
+CASCADE
+
+Chain Integrity Rules
+
+CASCADE triggers (any one):
+
+COM deviation ≥ threshold
+
+spine curvature + lower-chain failure
+
+two major lower-chain failures
+
+persistent propagation overload
+
+STRESS
+
+stabilizer strain
+
+rising asymmetry
+
+moderate COM deviation
+
+COMPENSATION
+
+controlled deviation
+
+stabilizers functioning
+
+STABLE
+
+minimal deviation
+
+no major contradictions
+
+Static vs Dynamic Separation
+
+Two independent states:
+
+STATIC STATE
+
+posture structure
+
+corridor alignment
+
+persistent asymmetry
+
+DYNAMIC STATE
+
+motion behavior
+
+COM drift
+
+momentum
+
+collapse progression
+
+Example:
+
+static: compensation
+
+dynamic: stable
+
+Origin Detection Engine
+
+Finds true source of dysfunction, not visible symptom.
+
+Each node is evaluated for:
+
+local burden
+
+transferred burden
+
+compensated burden
+
+persistence
+
+Origin criteria:
+
+strongest downstream propagation
+
+highest persistence
+
+weakest compensation success
+
+earliest burden
+
+highest local burden
+
+Outputs
+
+origin node
+
+propagation path
+
+terminal compensation zone
+
+confidence level
+
+Propagation Engine
+
+Tracks how instability moves:
+
+distal → proximal cascade
+
+proximal → distal compensation
+
+compensation loop
+
+mixed propagation
+
+Influences:
+
+dynamic state
+
+anchor zone
+
+treatment targeting
+
+Contradiction Detection
+
+Detects invalid structural combinations:
+
+Examples:
+
+COM stable + cascade
+
+stabilizer stable + COM unstable
+
+low burden + severe anchor
+
+When detected:
+
+reduce certainty
+
+soften conclusions
+
+output:
+
+mixed pattern
+
+unresolved compensation
+
+unstable but controlled
+
+Certainty Engine
+
+Determines confidence level:
+
+Inputs:
+
+pose confidence
+
+contradiction count
+
+metric agreement
+
+origin confidence
+
+propagation agreement
+
+corridor agreement
+
+hysteresis stability
+
+Outputs:
+
+HIGH
+
+MODERATE
+
+LOW
+
+Hysteresis (Stability Control)
+
+Prevents rapid role flipping:
+
+agonist: 8 frames
+
+antagonist: 8 frames
+
+stabilizer: 10 frames
+
+anchor: 12 frames
+
+origin: 12 frames
+
+Helix State (Final Meaning)
+
+Helix72 represents the combined stability field of:
+
+structure
+
+motion
+
+propagation
+
+stabilization capacity
+
+Key Distinction
+
+The Solver & Helix72 Engine explicitly separates:
+
+failure vs compensation
+
+origin vs symptom
+
+driver vs stabilizer
+
+structure vs motion
+
+Purpose in System
+
+This layer is where the system becomes clinically meaningful.
+
+It translates raw measurements into:
+
+actionable structure
+
+clear imbalance patterns
+
+reproducible interpretation
+
+It ensures the system does not just see the body—
+
+but understands:
+where it is failing, how it is compensating, and why.
