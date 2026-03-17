@@ -1,0 +1,245 @@
+Geometry & Metrics Engine — Description
+
+The Geometry & Metrics Engine converts raw pose landmarks into structured, quantitative biomechanical data. It is the measurement layer only—no interpretation, no roles—just precise extraction of structural state.
+
+Core Function
+
+Transform 2D pose coordinates into:
+
+joint relationships
+
+alignment deviations
+
+load distribution indicators
+
+movement change across frames
+
+This layer defines what the body is doing, not what it means.
+
+Primary Metric Groups
+1. Lower Chain Metrics
+
+foot angle (left/right)
+
+foot angle asymmetry
+
+ankle collapse deviation (corridor-based, not raw angle)
+
+ankle collapse type:
+
+medial (pronation)
+
+lateral (supination)
+
+rotational
+
+knee collapse deviation
+
+knee collapse type:
+
+valgus
+
+varus
+
+rotational
+
+flexion instability
+
+stance width / symmetry
+
+2. Hip & Pelvic Metrics
+
+left/right hip torque (2D proxy)
+
+torque asymmetry
+
+pelvic tilt
+
+pelvic rotation (hip line vs shoulder line)
+
+femur-to-pelvis orientation bias
+
+3. Spine & Upper Chain Metrics
+
+spine lean (global axis)
+
+spine curvature (segment deviation)
+
+spinal segmentation:
+
+cervical
+
+thoracic
+
+lumbar
+
+shoulder tilt
+
+torso shift
+
+4. Center of Mass (COM) Model
+
+global COM deviation
+
+COM drift (frame-to-frame)
+
+dual COM:
+
+upper body COM
+
+lower body COM
+
+COM split offset (upper vs lower disagreement)
+
+5. Structural Corridor Model
+
+Defines acceptable alignment zones per side.
+
+Per side:
+
+corridor center
+
+corridor deviation
+
+breach magnitude (normalized by stance width)
+
+States:
+
+intact
+
+caution
+
+breached
+
+6. Node Burden Model
+
+Each structural node receives a burden score:
+
+Nodes:
+
+foot
+
+ankle
+
+knee
+
+hip
+
+pelvis
+
+trunk
+
+shoulder
+
+cervical/head
+
+Each node tracks:
+
+local burden
+
+transferred burden
+
+compensated burden
+
+persistence across frames
+
+7. Dynamic Metrics
+
+Captured across frames:
+
+ankle collapse change
+
+knee collapse change
+
+COM drift change
+
+pelvic tilt change
+
+corridor change
+
+Used for:
+
+momentum detection
+
+propagation modeling
+
+dynamic state classification
+
+8. Momentum Classification
+
+Based on multi-frame trends:
+
+increasing burden
+
+stable
+
+recovering
+
+oscillating
+
+9. Phase-Aware Adjustment
+
+Dynamic thresholds adapt to movement phase:
+
+left stance
+
+right stance
+
+double support
+
+swing
+
+This prevents false positives during motion.
+
+Normalization & Constraints
+
+all deviations normalized to body scale
+
+corridor normalized by stance width
+
+angles clamped to physiologic ranges
+
+frame gating prevents unstable inputs
+
+Output Characteristics
+
+deterministic (same input → same output)
+
+frame-indexed
+
+unit-consistent (degrees, normalized ratios)
+
+confidence-aware (low-confidence metrics flagged)
+
+Design Boundary (Critical)
+
+This layer does not:
+
+assign TAM roles
+
+determine stability state
+
+identify origin
+
+interpret clinical meaning
+
+It only produces clean, structured biomechanical data for the solver layer.
+
+Purpose in System
+
+The Geometry & Metrics Engine is the foundation of truth.
+
+If this layer is accurate:
+
+solver becomes reliable
+
+origin detection stabilizes
+
+clinical interpretation becomes consistent
+
+If this layer drifts:
+
+everything above it fails
+
+This layer ensures the system always knows:
+exactly what the body is doing—frame by frame, side by side, node by node.
